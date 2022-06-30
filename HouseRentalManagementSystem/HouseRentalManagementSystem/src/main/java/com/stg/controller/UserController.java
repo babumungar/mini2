@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.stg.model.House;
 import com.stg.model.User;
 import com.stg.repository.UserRepository;
 
@@ -26,7 +25,7 @@ public class UserController {
 	public User createUser(@RequestBody User user) {
 		return this.userRepository.save(user);
 	}
-	
+
 	@GetMapping(value = "readallusers")
 	public List<User> readAllHouses() {
 		return this.userRepository.findAllUsers();
@@ -43,7 +42,9 @@ public class UserController {
 	}
 
 	@DeleteMapping(value = "deletebyid/{a}")
-	public User deleteById(@PathVariable("a") int id) {
-		return this.userRepository.deleteById(id);
+	public String deleteById(@PathVariable("a") int id) {
+		this.userRepository.deleteById(id);
+		return "success";
 	}
+
 }

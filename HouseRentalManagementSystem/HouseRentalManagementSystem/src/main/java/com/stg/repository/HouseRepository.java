@@ -21,7 +21,7 @@ public interface HouseRepository extends CrudRepository<House, Integer> {
 	@Query(value = "SELECT* FROM house a where a.house_name = :var1", nativeQuery = true)
 	public abstract House readByName(@Param("var1") String name);
 
-	@Query(value = "DELETE FROM house a where a.house_id = :var1", nativeQuery = true)
-	public abstract House deleteById(@Param("var1") int id);
+	//@Query(value = "DELETE FROM house a where a.house_id = :var1", nativeQuery = true)
+	//public abstract House deleteById(@Param("var1") int id);
 
 }

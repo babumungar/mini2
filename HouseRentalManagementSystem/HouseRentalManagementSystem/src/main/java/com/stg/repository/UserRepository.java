@@ -7,12 +7,11 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.stg.model.House;
 import com.stg.model.User;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Integer>{
-	
+public interface UserRepository extends CrudRepository<User, Integer> {
+
 	@Query(value = "SELECT * FROM user", nativeQuery = true)
 	public abstract List<User> findAllUsers();
 
@@ -22,7 +21,8 @@ public interface UserRepository extends CrudRepository<User, Integer>{
 	@Query(value = "SELECT* FROM user a where a.user_name = :var1", nativeQuery = true)
 	public abstract User readByName(@Param("var1") String name);
 
-	@Query(value = "DELETE FROM user a where a.user_id = :var1", nativeQuery = true)
-	public abstract User deleteById(@Param("var1") int id);
+	// @Query(value = "DELETE FROM user a where a.user_id = :var1", nativeQuery =
+	// true)
+	// public abstract User deleteById(@Param("var1") int id);
 
 }

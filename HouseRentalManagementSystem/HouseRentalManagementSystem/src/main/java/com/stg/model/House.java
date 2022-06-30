@@ -32,10 +32,9 @@ public class House {
 	private Admin adminRef;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_id",nullable = false, referencedColumnName = "userId")
-	@JsonBackReference(value = "userPojo")
-	 private User userRef;
-	 
+	@JoinColumn(name = "user_id",  referencedColumnName = "userId")
+	@JsonBackReference(value = "user_house")
+	private User userRef;
 
 	public House() {
 		super();

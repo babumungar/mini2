@@ -27,7 +27,7 @@ public class User {
 	private String password;
 	private String userMobileNo;
 	
-	@JsonManagedReference(value = "userPojo")
+	@JsonManagedReference(value = "user_house")
 	@OneToOne(mappedBy = "userRef")
 	private House house;
 	

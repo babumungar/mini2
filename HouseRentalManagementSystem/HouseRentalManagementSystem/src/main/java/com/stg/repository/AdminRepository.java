@@ -19,7 +19,7 @@ public interface AdminRepository extends CrudRepository<Admin, Integer> {
 	@Query(value = "SELECT* FROM admin a where a.admin_name = :var1", nativeQuery = true)
 	public abstract Admin readByName(@Param("var1") String name);
 
-	@Query(value = "DELETE FROM admin a where a.admin_id = :var1", nativeQuery = true)
-	public abstract Admin deleteById(@Param("var1") int id);
+//	@Query(value = "DELETE FROM admin a where a.admin_id = :var1", nativeQuery = true)
+//	public abstract Admin deleteById(@Param("var1") int id);
 
 }
