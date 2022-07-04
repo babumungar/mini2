@@ -1,0 +1,55 @@
+														#Admin Creation
+
+{
+  "adminId": 0,
+  "adminMobileNo": "545445465",
+  "adminName": "a1",
+ 
+  "password": "string"
+}
+
+
+
+														#House creation
+
+{
+
+  "houseAddress": "3-33, hyderabad, 500081",
+  "houseId": 0,
+  "houseName": "h1"
+ 
+}
+adminId  1
+
+
+
+
+
+														#House updation
+{
+  "houseAddress": "string",
+  "houseId": 3,
+  "houseName": "string"
+ 
+}
+
+														#User creation
+{
+  "password": "string",
+  "userId": 0,
+  "userMobileNo": "string",
+  "userName": "string"
+}
+
+														#User updation
+{
+  "house": {
+    
+    "houseId": 2
+    
+  },
+  "password": "string",
+  "userId": 2,
+  "userMobileNo": "string",
+  "userName": "string"
+}
